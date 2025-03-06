@@ -17,7 +17,14 @@ namespace Assets.Scripts.Menu
 
         public void Exit()
         {
+            #if UNITY_WEBGL
+            // Для WebGL — просто перехід на інший сайт або повідомлення
+            Debug.Log("Exit не підтримується у WebGL");
+            Application.OpenURL("https://choiseoda-nation-frontend.vercel.app/"); // Наприклад, головна сторінка
+            #else
+            // Для всіх інших платформ — стандартний вихід
             Application.Quit();
+            #endif
         }
     }
 }
