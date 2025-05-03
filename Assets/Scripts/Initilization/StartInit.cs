@@ -2586,8 +2586,642 @@ namespace Assets.Scripts.Initilization
                                         new Content()
                                         {
                                             Id = 0,
-                                            Text = "",
-                                            TextEng = ""
+                                            Text = "Після вирішальної битви між Ярославом Мудрим та Святополком Окаянним доля Русі вкотре хитнулася, та цього разу — остаточно в бік порядку, а не смути. Кров, пролита під Лубнем, де війська Ярослава зійшлися з чисельно потужнішими силами Святополка та його союзника Болеслава Хороброго, не була даремною.",
+                                            TextEng = "After the decisive battle between Yaroslav the Wise and Svyatopolk the Cursed, the fate of Rus' swung once again, but this time definitively towards order rather than turmoil. The blood shed at Lubny, where Yaroslav's troops clashed with the numerically superior forces of Svyatopolk and his ally Boleslav the Brave, was not in vain."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Після поразки, Святополк, відкинутий і своїми, і чужими, втік на захід. Зі свідчень літописців і пізніших хроністів, відомо, що він намагався зібрати залишки своєї влади, проте марно. Поляки, які ще вчора стояли з ним пліч-о-пліч, більше не бачили в ньому корисного союзника.",
+                                            TextEng = "After the defeat, Svyatopolk, rejected by both his own and foreign people, fled to the west. From the testimonies of chroniclers and later chroniclers, it is known that he tried to gather the remnants of his power, but in vain. The Poles, who had stood with him shoulder to shoulder yesterday, no longer saw him as a useful ally."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "У 1019 році, Святополк помер у вигнанні — за однією з версій, у Чехії, за іншою — в межах Польщі. Народ і князі прозвали його Окаянним — не стільки за зраду братові, як за зраду самій Русі.",
+                                            TextEng = "In 1019, Svyatopolk died in exile — according to one version, in Bohemia, according to another — within Poland. The people and princes nicknamed him the Accursed — not so much for betraying his brother, but for betraying Rus itself."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Ярослав, утвердившись у Києві, нарешті став єдиним володарем Руської землі. Битва завершила тривалу усобицю, яка точилася після смерті Володимира Великого. Він почав активно розбудовувати державу, укріплюючи не тільки її військову, а й духовну основу. На зміну братовбивчому безглуздю прийшов порядок.",
+                                            TextEng = "Yaroslav, having established himself in Kiev, finally became the sole ruler of the Russian land. The battle ended a long feud that had been going on since the death of Vladimir the Great. He began to actively build the state, strengthening not only its military but also its spiritual foundation. Order replaced the fratricidal madness."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "З Києва Ярослав правив уже не просто як князь, а як будівничий державності. Він відновив зв’язки з Константинополем, затвердив нові князівства для синів і розпочав розробку першого письмового зводу законів — «Руської правди».",
+                                            TextEng = "From Kyiv, Yaroslav ruled not just as a prince, but as a builder of statehood. He restored ties with Constantinople, established new principalities for his sons, and began drafting the first written code of laws, the Rus' Pravda."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Після остаточної перемоги над Святополком Окаянним та його смертю в 1019 році, перед Ярославом Мудрим відкрилися двері до творення нової доби Русі. Київ упокорився, а воля Ярослава стала єдиним законом для розбурханої держави. Але спокій не прийшов одразу. Мусив він наводити лад після руйнацій, гасити залишки повстань, укріплювати кордони і формувати нову внутрішню опору влади.",
+                                            TextEng = "After the final victory over Svyatopolk the Cursed and his death in 1019, the door to the creation of a new era of Rus' opened before Yaroslav the Wise. Kyiv was subdued, and Yaroslav's will became the only law for the turbulent state. But peace did not come immediately. He had to restore order after the destruction, quell the remnants of the uprisings, strengthen the borders and form a new internal support for power."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "На заході ще дихала Польща, що недавно сунула рать під хоругвами Болеслава Хороброго. Ярослав не поспішав помститися — уклав мир, одружився з дочкою скандинавського конунга Інгігердою (Іриною), і тим самим залучив на свій бік варязьку підтримку. У 1020-х він розпочав укріплення міст і будівництво фортець по рубежах, зокрема на півдні — де кочовики знову заглядали в українські степи.",
+                                            TextEng = "In the west, Poland was still breathing, having recently sent an army under the banners of Bolesław the Brave. Yaroslav was in no hurry to take revenge - he made peace, married the daughter of the Scandinavian king Ingigerda (Irina), and thereby attracted Varangian support to his side. In the 1020s, he began to strengthen cities and build fortresses along the borders, particularly in the south - where nomads again looked into the Ukrainian steppes."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "У ці роки закладається славетна Софія Київська, велетенська кам'яна святиня, гідна імперських міст. Це був не лише жест віри, а й політична заява — Київ став духовним і культурним центром на рівні Константинополя.\r\n\r\nТак само Ярослав закріплює внутрішню правову систему. «Руська Правда», складена саме в цей період, стала наріжним каменем управління державою. Князь, який раніше ходив у бойовому плащі, тепер одягнув мантію законодавця.",
+                                            TextEng = "During these years, the glorious St. Sophia of Kiev was laid, a gigantic stone shrine worthy of imperial cities. It was not only a gesture of faith, but also a political statement - Kiev became a spiritual and cultural center on the level of Constantinople.\r\n\r\nYaroslav also consolidated the internal legal system. \"Russkaya Pravda\", compiled during this period, became the cornerstone of state governance. The prince, who had previously walked in a battle cloak, now donned the mantle of a legislator."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Водночас він не забував і про зовнішню політику. Династичні шлюби з Францією, Норвегією, Угорщиною, Польщею і Візантією перетворили Русь на поважного гравця в європейському клубі монархій. Саме тому історики й прозвали Ярослава — Тестем Європи.",
+                                            TextEng = "At the same time, he did not forget about foreign policy. Dynastic marriages with France, Norway, Hungary, Poland, and Byzantium turned Russia into a respectable player in the European club of monarchies. That is why historians nicknamed Yaroslav the Father-in-Law of Europe."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "Проте війна з печенігами ще чекала свого часу. На півдні Русь готувалася до великої битви, яку Ярослав виграє в 1036 році, остаточно знищивши загрозу кочових набігів. Але це — вже інший розділ.",
+                                            TextEng = "However, the war with the Pechenegs was still waiting for its time. In the south, Rus was preparing for a great battle, which Yaroslav would win in 1036, finally destroying the threat of nomadic raids. But that is another chapter."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "1036",
+                                        Description = "Княже, ти відчував, як з кожною зимою степ дихає ближче. Печеніги більше не просто кочували — вони нишпорили біля наших рубежів, спостерігали, шукали слабке місце, щілину в захисті. Ми знали: їхній напад — лише питання часу. І тому ти не чекав, коли ворог ударить першим.",
+                                        DescriptionEng = "Prince, you felt how the steppe breathed closer with each winter. The Pechenegs were no longer just wandering - they were prowling around our borders, observing, looking for a weak spot, a gap in the defense. We knew: their attack was only a matter of time. And that's why you didn't wait for the enemy to strike first.",
+                                        Result = new List<Parametrs>()
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 10
+                                            },
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 30,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Ти наказав зміцнити південні укріплення — у Києві, Переяславі, Вишгороді, по лівому березі Дніпра. Ми вирізали нові зрубні вежі, насипали оборонні вали, ставили варту, що не знала сну. Селяни і ремісники вчилися володіти списом, а княжі вої — тепер не лише дружинники, а й міцно озброєні ратники зі всієї округи — пройшли численні збори.",
+                                            TextEng = "You ordered the southern fortifications to be strengthened - in Kyiv, Pereyaslav, Vyshgorod, on the left bank of the Dnieper. We carved new log towers, built defensive ramparts, and posted a guard that knew no sleep. Peasants and artisans learned to wield a spear, and the princely warriors - now not only druzhinniks, but also heavily armed warriors from the entire district - underwent numerous gatherings."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "І водночас ти збирав союз. Посли рушали в Новгород, Ростов, Смоленськ, Чернігів — бо ми знали: лише єдністю зможемо втримати землю. Ти підкупив час, заключивши короткі перемир’я з литовськими племенами й поляками, аби захід був спокійним, поки південь готується до бурі.",
+                                            TextEng = "And at the same time you were gathering an alliance. Ambassadors were setting off to Novgorod, Rostov, Smolensk, Chernigov — because we knew: only through unity can we hold the land. You bought time by concluding short truces with the Lithuanian tribes and Poles, so that the west would be calm while the south prepared for the storm."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "На твоєму боці вже були не лише мечі, а й молитви. Митрополити й ігумени молились за перемогу, церкви зміцнювали дух. І над усім тим — твоє слово, княже: тверде, як криця, і ясне, як день.\r\n\r\nТи не йшов на битву із поспіхом. Ти чекав, поки ворог сам прийде — але був готовий зустріти його не як жертва, а як той, хто давно вирив для нього пастку.",
+                                            TextEng = "On your side were already not only swords, but also prayers. Metropolitans and abbots prayed for victory, churches strengthened their spirit. And above all that — your word, prince: firm as clay, and clear as day.\r\n\r\nYou did not go to battle in a hurry. You waited for the enemy to come himself — but you were ready to meet him not as a victim, but as one who had long ago dug a trap for him."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Велика битва наближалася. І все на Русі дихало очікуванням — не страху, а впевненості, що князь Ярослав — не лише син Володимира, а й меч Господній, яким буде відсічено ланцюг кочового терору.",
+                                            TextEng = "The great battle was approaching. And everything in Russia breathed with expectation — not fear, but confidence that Prince Yaroslav was not only the son of Vladimir, but also the sword of the Lord, which would cut the chain of nomadic terror."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Ранок тієї осені 1036 року видався похмурим, але спокійним. Над Дніпром повис туман, ніби сама земля затамувала подих. Київ ще спав, але ми — ні. Наші розвідники поверталися з тривожними звістками: печенізькі орди, наче чорна хмара, сунули до міста з південного степу. Не грабіжницький наліт — а справжній наступ, об’єднаний, великий. Їх було не менше ніж сорок тисяч, з усієї орди. Йшли з таборами, возами, зі старими та жінками — значить, не повертатися з Києва вони не збирались.",
+                                            TextEng = "The morning of that autumn of 1036 seemed gloomy, but calm. A fog hung over the Dnieper, as if the earth itself had held its breath. Kyiv was still asleep, but we were not. Our scouts were returning with alarming news: the Pecheneg hordes, like a black cloud, were advancing on the city from the southern steppe. Not a raiding raid — but a real attack, united, large. There were no less than forty thousand of them, from the entire horde. They were coming with camps, carts, with old men and women — so they were not going to not return from Kyiv."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Ти, княже Ярославе, був у Новгороді — але не гаяв ані години. Як лиш почув, що Київ під загрозою, зібрав усі свої сили та рішуче рушив до столиці. І поки ти скакав крізь осінній дощ, ми в Києві вже готувались до бою. Вся княжа дружина, полки із Вишгорода, Переяслава, навіть кілька сотень новгородських стрільців, що встигли прибути раніше, зосередились біля Лядських воріт — саме туди мав лягти головний удар ворога.",
+                                            TextEng = "You, Prince Yaroslav, were in Novgorod — but you didn’t waste a single hour. As soon as you heard that Kyiv was under threat, you gathered all your forces and resolutely moved towards the capital. And while you were galloping through the autumn rain, we in Kyiv were already preparing for battle. The entire princely squad, regiments from Vyshgorod, Pereyaslav, even a few hundred Novgorod riflemen who had arrived earlier, concentrated near the Lyadsky Gate — that was where the enemy’s main blow was to be struck."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "На світанку наші дозори повідомили: печеніги вже таборують під самим Києвом, розбивши стійбища у трьох милях на південь. Їхній табір був широкий і неорганізований, вони не чекали, що Русь зуміє виступити так швидко. Але ми вже були готові.\r\n\r\nІ тоді з’явився ти, княже — з півночі, з полками, що зміцнили наші ряди. Бойовий дух піднявся, мов полум’я. Воїн воїну передавав: «Князь із нами!» — і це додавало більше, ніж меч у руці.",
+                                            TextEng = "At dawn, our patrols reported: the Pechenegs were already encamped near Kiev itself, having set up camp three miles to the south. Their camp was wide and disorganized, they did not expect that Russia would be able to advance so quickly. But we were already ready.\r\n\r\nAnd then you appeared, prince - from the north, with regiments that strengthened our ranks. The fighting spirit rose like a flame. Warrior to warrior passed on: \"The prince is with us!\" - and this added more than a sword in hand."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Надвечір, коли ворог ще не встиг укріпитись, ти віддав наказ готувати лаву. І ми пішли — не в оборону, а в наступ. Бо земля Русі — то не здобич для степу. І наш клич, змішаний із гортанним риком печенігів, вперше зійшовся в єдиному місці: на полі великої битви, що вирішить долю цілого століття.\r\n\r\nМечі були витягнуті. І поле готувалось до кривавого жнив’я.",
+                                            TextEng = "In the evening, when the enemy had not yet had time to strengthen, you gave the order to prepare the line. And we went - not to the defense, but to the offensive. For the land of Russia is not prey for the steppe. And our cry, mixed with the guttural roar of the Pechenegs, for the first time converged in one place: on the field of the great battle, which would decide the fate of an entire century.\r\n\r\nSwords were drawn. And the field was prepared for a bloody harvest."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Київ",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Бій"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість ворожої армії",
+                                                Value = 38000
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 2,
+                                                Name = "Бойовий дух ворожої армії",
+                                                Value = 80
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 3,
+                                                Name = "Організація ворожої армії",
+                                                Value = 50
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 4,
+                                                Name = "Yaroslav"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 5,
+                                                Name = "default"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 6,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 33
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 7,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = 10
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 31,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Коли пил битви осів, а печенізькі тіла вкрили поле перед Лядськими воротами — ми зрозуміли: це не просто перемога. Це була відплата. Печенізький табір був розбитий ущент, їхні сили розсіяні, вожді загинули або потрапили в полон. Ворог, що десятиліттями тероризував південні рубежі Русі, більше ніколи не насмілиться наблизитись до Києва. Серед людей пішло слово, що сам Бог благословив цю перемогу, і ми не відступили перед навалою, бо стояли на праведній землі.",
+                                            TextEng = "When the dust of the battle settled and the Pecheneg bodies covered the field in front of the Lyadsky Gate, we understood: this was not just a victory. This was retribution. The Pecheneg camp was completely destroyed, their forces scattered, their leaders killed or captured. The enemy, who had terrorized the southern borders of Rus for decades, would never again dare to approach Kyiv. Word spread among the people that God himself had blessed this victory, and we did not retreat before the invasion, because we stood on righteous ground."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Ти, княже, зібрав старійшин, дружинників і духовенство — і на полі битви постановив: буде тут святиня. Бо там, де руська кров змилась дощем із чорної землі, має вирости храм, щоб звеличити Того, хто дарував перемогу. Так було закладено Софію Київську — не просто церкву, а символ слави, мудрості й вічності держави.",
+                                            TextEng = "You, prince, gathered the elders, warriors, and clergy — and on the battlefield you decreed: there will be a shrine here. For where the Russian blood was washed away by rain from the black earth, a temple must grow to glorify the One who granted victory. Thus was founded St. Sophia of Kiev — not just a church, but a symbol of glory, wisdom, and eternity of the state."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Після перемоги ти укріпив кордони, звів оборонні споруди, поставив дозори вздовж степу. На південь вирушили посланці — до печенігів, що залишилися. Одним — попередження, іншим — слово миру. Бо Русь уже не була беззахисною.\r\n\r\nМісто Київ святкувало. Купці знову рушили шляхом «із варяг у греки», без страху. Жінки та діти не плакали при згадці про степ. І в кожній хаті, в кожному домі запанував спокій — той, що здобувається лише кров’ю та залізом.",
+                                            TextEng = "After the victory, you strengthened the borders, built defensive structures, and set up patrols along the steppe. Envoys set off south to the remaining Pechenegs. One with a warning, the other with a word of peace. For Rus was no longer defenseless.\r\n\r\nThe city of Kyiv celebrated. Merchants once again set off on the path “from the Varangians to the Greeks,” without fear. Women and children did not cry at the mention of the steppe. And in every hut, in every house, peace reigned—the kind that can only be won with blood and iron."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "А ім’я твоє, княже, — Ярослав Мудрий — відтоді стало не лише титулом, а визначенням цілої епохи. І ми знали: попереду нові справи, нові закони, нові храми. Але вже не у тіні страху, а в світлі перемоги.",
+                                            TextEng = "And your name, prince, Yaroslav the Wise, has since become not just a title, but the definition of an entire era. And we knew: new deeds, new laws, new temples lay ahead. But no longer in the shadow of fear, but in the light of victory."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Твоє князювання, Ярославе, стало символом початку правового порядку на Русі. Ти не лише завоював серця своїх підданих, а й започаткував реформу у судочинстві. «Руська правда» стала першим важливим документом, що впорядковував суспільне життя. Вона визначала правила для всіх — від найвищих до найнижчих. Це був не просто юридичний кодекс, а й фундамент для майбутніх поколінь, які за ним жили, працювали та захищали землю. Від тебе, княже, Русь отримала впорядковане суспільство, де не було місця свавіллю.",
+                                            TextEng = "Your reign, Yaroslav, became a symbol of the beginning of the legal order in Russia. You not only won the hearts of your subjects, but also initiated a reform in the judiciary. “Russkaya Pravda” became the first important document that regulated public life. It defined the rules for everyone — from the highest to the lowest. It was not just a legal code, but also the foundation for future generations who lived, worked and protected the land according to it. From you, prince, Rus received an ordered society, where there was no place for arbitrariness."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Ти, Ярославе, сам був прикладом мудрості та віри, яка пронизувала твоє правління. Від початку твого правління Київ перетворювався на центр величі. Один з найбільших символів твоєї влади — це Софійський собор, велетенська святиня, яка була збудована як утілення не лише релігійної, але й культурної сили Русі. Вона стала центром християнського життя, тут почали діяти школи та бібліотеки, що дозволяли розвивати освіченість серед народу. Ти сам створював умови для розвитку культури, запровадивши скрипторії та підтримавши діяльність книжників.",
+                                            TextEng = "You, Yaroslav, were yourself an example of the wisdom and faith that permeated your reign. From the beginning of your reign, Kyiv was transformed into a center of greatness. One of the greatest symbols of your power is St. Sophia Cathedral, a gigantic shrine that was built as the embodiment of not only the religious, but also the cultural power of Rus. It became the center of Christian life, schools and libraries began to operate here, which allowed the development of education among the people. You yourself created the conditions for the development of culture, introducing scriptoria and supporting the activities of scribes."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Важливим аспектом твого правління, княже, стала дипломатія. Ти, здається, обвів увесь континент, використовуючи не лише меч, але й мирний шлях, укладаючи союзи через шлюби. Донька Анна стала королевою Франції, і це стало частиною твоєї стратегічної політики, яка зміцнила твої позиції серед європейських правителів. Завдяки цьому ти забезпечив Русь великим визнанням на міжнародній арені. Кожен шлюб зміцнював зв’язки з іншими державами, і цими зв’язками ти намагався протистояти можливим загрозам ззовні.",
+                                            TextEng = "An important aspect of your reign, prince, was diplomacy. You seem to have circled the entire continent, using not only the sword, but also the peaceful path, making alliances through marriage. Your daughter Anna became Queen of France, and this became part of your strategic policy, which strengthened your position among European rulers. Thanks to this, you provided Russia with great recognition on the international stage. Each marriage strengthened ties with other states, and with these ties you tried to resist possible threats from the outside."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Останні роки правління Ярослава Мудрого були часом стабільності для Русі, але й періодом, що позначався новими викликами. Протягом цього часу, князь вже не так активно розширював свої землі, як у попередні роки, але зосередився на зміцненні того, що він здобув раніше. Він продовжував утримувати союз із Західною Європою через шлюби своїх дітей і навіть намагався зміцнити християнство в Русі, через будівництво нових церков і сприяння розвитку церковної організації.",
+                                            TextEng = "The last years of Yaroslav the Wise's reign were a time of stability for Rus', but also a period marked by new challenges. During this time, the prince was no longer as active in expanding his lands as in previous years, but focused on consolidating what he had previously gained. He continued to maintain an alliance with Western Europe through the marriages of his children and even tried to strengthen Christianity in Rus', by building new churches and promoting the development of church organization."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Однією з важливих подій цього періоду стало те, що Ярослав все більше переймався питаннями внутрішнього управління, встановлюючи певний баланс між старшими князями. Проте після його смерті, коли розпочалася боротьба між синами за владу, цей баланс розпався.",
+                                            TextEng = "One of the important events of this period was that Yaroslav became increasingly concerned with internal governance, establishing a certain balance between the senior princes. However, after his death, when the struggle for power began between his sons, this balance collapsed."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "У 1054 році Ярослав передав владу своїм синам: Ізяславу, Святославу і Всеволоду. Розподіл земель між синами був важливим кроком для уникнення внутрішніх конфліктів, але цей розподіл згодом став причиною боротьби за владу між князями. Це стало першою ознакою того, що Русь після його смерті зіткнеться з новими труднощами у підтримці єдності держави.",
+                                            TextEng = "In 1054, Yaroslav passed power to his sons: Izyaslav, Svyatoslav and Vsevolod. The division of lands between the sons was an important step in avoiding internal conflicts, but this division later became the cause of the struggle for power between the princes. This was the first sign that after his death, Rus would face new difficulties in maintaining the unity of the state."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 10,
+                                            Text = "Після того, як Ярослав Мудрий передав своїм синам керування великими частинами держави, настав час, коли велич і єдність Русі почали поступово руйнуватися. Він розумів, що його спадщина стане перевіркою на здатність зберігати єдність у межах величезної держави.",
+                                            TextEng = "After Yaroslav the Wise handed over control of large parts of the state to his sons, the time came when the greatness and unity of Rus' began to gradually crumble. He understood that his legacy would be a test of his ability to maintain unity within the borders of a vast state."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 11,
+                                            Text = "Після його смерті в 1054 році, Русь розділилась між його синами, і це стало початком періоду, відомого як період міжусобиць. Ті сини, які отримали частини держави, почали боротися за ще більшу владу, київський престол став об’єктом боротьби.",
+                                            TextEng = "After his death in 1054, Rus' was divided among his sons, and this marked the beginning of a period known as the Period of Strife. Those sons who received parts of the state began to fight for even greater power, with the Kievan throne becoming the object of struggle."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 12,
+                                            Text = "Ізяслав Ярославич, старший син Ярослава, отримав Київ. Він був обраний для того, щоб правити всією Руссю, але не зміг утримати владу без боротьби з братами. Боротьба між братами за князівства на заході та сході Русі стала звичайним явищем, що призвело до численних конфліктів. Ізяслав, незважаючи на спроби об'єднати державу, зіткнувся з великими труднощами.",
+                                            TextEng = "Izyaslav Yaroslavich, the eldest son of Yaroslav, received Kiev. He was chosen to rule all of Rus', but could not hold on to power without a struggle with his brothers. The struggle between the brothers for the principalities in the west and east of Rus' became a common occurrence, leading to numerous conflicts. Izyaslav, despite his attempts to unite the state, faced great difficulties."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 13,
+                                            Text = "Святослав Ярославич, князь Чернігова, прагнув зміцнити свій вплив і навіть намагався зібрати сили для боротьби за Київ. Внаслідок цього було кілька серйозних битв між синами Ярослава, і між ними розпочалася боротьба за домінування на різних територіях, що також вплинуло на зовнішні стосунки Русі.",
+                                            TextEng = "Svyatoslav Yaroslavich, Prince of Chernigov, sought to strengthen his influence and even tried to gather forces to fight for Kiev. As a result, there were several serious battles between Yaroslav's sons, and a struggle began between them for dominance in various territories, which also affected the foreign relations of Rus."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 14,
+                                            Text = "Не менш важливу роль у цих внутрішніх конфліктах відігравав Володимир Мономах, який згодом зумів стабілізувати ситуацію в державі. Однак навіть за його правління Русь лишалась у постійних розбратів і складнощах.",
+                                            TextEng = "An equally important role in these internal conflicts was played by Vladimir Monomakh, who later managed to stabilize the situation in the state. However, even during his reign, Rus remained in constant discord and difficulties."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 15,
+                                            Text = "Розподіл територій, постійні усобиці, боротьба за престол призвели до ослаблення єдності Русі, що стало однією з причин її подальших труднощів у боротьбі з зовнішніми ворогами, такими як половці і монголи.",
+                                            TextEng = "The division of territories, constant feuds, and the struggle for the throne led to the weakening of the unity of Rus', which became one of the reasons for its subsequent difficulties in the fight against external enemies, such as the Polovtsy and Mongols."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 16,
+                                            Text = "Врешті-решт, ці внутрішні міжусобиці стали одним із основних факторів, які призвели до падіння могутності Київської Русі, ослаблення центральної влади і фактичного поділу держави на дрібніші князівства.",
+                                            TextEng = "Ultimately, these internal strife became one of the main factors that led to the decline of the power of Kievan Rus, the weakening of central power, and the de facto division of the state into smaller principalities."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 17,
+                                            Text = "І минали роки після смерті Ярослава Мудрого, а землі Русі ставали дедалі розділенішими. Права старшого на престол Київський — те правило, що мало б тримати державу в єдності, обернулося тягарем і джерелом постійних усобиць.",
+                                            TextEng = "And as the years passed after the death of Yaroslav the Wise, the lands of Rus became increasingly divided. The right of the eldest to the throne of Kiev, the rule that was supposed to keep the state united, turned into a burden and a source of constant strife."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 18,
+                                            Text = "Ізяслав Ярославич, що спочатку успадкував Київ, не зміг утримати його у своїх руках надовго. Проти нього виступили його ж брати — Святослав і Всеволод. Вони, вбачаючи слабкість Ізяслава, змовились і вигнали його з Києва. Ізяслав шукав підтримки на заході, навіть звернувся по допомогу до польського короля Болеслава II Сміливого. За допомогою польських військ Ізяслав повернув собі владу, але ненадовго: невдовзі його знову вигнали, і Київська держава знову затрусилася від братовбивчої боротьби.",
+                                            TextEng = "Izyaslav Yaroslavich, who initially inherited Kyiv, was unable to hold it in his hands for long. His own brothers, Svyatoslav and Vsevolod, opposed him. Seeing Izyaslav's weakness, they conspired and expelled him from Kyiv. Izyaslav sought support in the West, even turning to the Polish king Boleslav II the Bold for help. With the help of Polish troops, Izyaslav regained power, but not for long: he was soon expelled again, and the Kyiv state was once again shaken by fratricidal strife."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 19,
+                                            Text = "Святослав Ярославич зайняв Київ, зміцнившись на троні, проте смерть не забарилася — і після його загибелі Всеволод Ярославич перебрав владу до своїх рук. Саме він тримав Київ у час, коли Русь уже розривали суперечності між різними князями, а землі почали жити власним життям.",
+                                            TextEng = "Svyatoslav Yaroslavich took Kyiv, having consolidated his position on the throne, but death was not long in coming, and after his death, Vsevolod Yaroslavich took power into his own hands. It was he who held Kyiv at a time when Rus was already torn apart by conflicts between various princes, and the lands began to live their own lives."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 20,
+                                            Text = "А на південних степах наростала нова загроза: половці, сильні і численні, щороку глибше проникали в руські землі, розоряючи міста й села. Київ уже не міг один стримати натиск — князі мусили домовлятися, виступати разом, але сварки між ними раз по раз ламали кожен союз.",
+                                            TextEng = "And in the southern steppes a new threat was growing: the Polovtsy, strong and numerous, penetrated deeper into the Rus' lands every year, ravaging cities and villages. Kyiv could no longer hold back the onslaught alone - the princes had to come to an agreement and act together, but quarrels between them repeatedly broke each alliance."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 21,
+                                            Text = "Всеволод Ярославич, у старості вже немічний, намагався тримати державу бодай у зовнішньому спокої. Та коли його не стало, на полі брані знову зустрілися руські князі. І лише народжений із кращого кореня — син Всеволода, Володимир Мономах, зміг хоч на деякий час стримати падіння, зібрати князів, приборкати гордість та ворожнечу.",
+                                            TextEng = "Vsevolod Yaroslavich, already weak in old age, tried to keep the state at least in external peace. But when he was gone, the Russian princes met again on the battlefield. And only Vsevolod's son, Vladimir Monomakh, who was born of a better lineage, was able to at least for a while restrain the decline, gather the princes, and curb pride and enmity."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "1113",
+                                        Description = "Та це вже буде новий час, нова доба. Доба, коли Русь, зранена і стомлена міжусобицями, ще раз підніметься для останнього великого злету перед майбутніми випробуваннями.",
+                                        DescriptionEng = "But this will be a new time, a new era. An era when Russia, wounded and tired of internecine strife, will rise once again for the last great takeoff before the future trials.",
+                                        Result = new List<Parametrs>()
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = -500
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = -20
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 32,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Коли Володимир Мономах ступив на київські пороги, Русь була, мов поле після бурі: міста понівечені, села знесилені, люди озлоблені. Половці безкарно нишпорили степами і межами, князі чварилися за кожен клаптик землі, а купці оминали Київ, як розбитий міст.\r\n\r\nІ тоді Володимир, не гаючи часу, взявся до діла, ніби вправний коваль, що лагодить зламаний меч.",
+                                            TextEng = "When Volodymur Monomakh stepped on the threshold of Kiev, Rus was like a field after a storm: cities were devastated, villages were exhausted, people were embittered. Polovtsians roamed the steppes and borders with impunity, princes were fighting for every piece of land, and merchants bypassed Kiev like a broken bridge.\r\n\r\nAnd then Vladimir, without wasting time, got down to business, like a skilled blacksmith mending a broken sword."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Першим ділом він скликав військо з усього князівства. Він не кликав у походи заради слави чи здобичі, він кликав заради миру. Гнали половців без відпочинку: одних змусили схилити коліна і скласти зброю, інших — відігнали далеко за степові межі. Було здійснено низку походів — не в єдину битву, а в довгу війну на виснаження, де меч і розум ішли поряд. Він не дозволяв ворогу отямитися, не давав йому часу знову зібрати силу.",
+                                            TextEng = "The first thing he did was to call an army from all over the principality. He did not call for campaigns for the sake of glory or booty, he called for peace. The Polovtsians were driven without rest: some were forced to bend their knees and lay down their weapons, others were driven far beyond the steppe borders. A series of campaigns were carried out - not in a single battle, but in a long war of attrition, where the sword and the mind went hand in hand. He did not allow the enemy to come to his senses, did not give him time to gather strength again."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Одночасно з мечем у руці Мономах тримав і перо законодавця. Він видав Статут, у якому захистив найслабших: заборонив лихварям забирати боржників у рабство за дрібні борги, обмежив розміри відсотків, впорядкував судочинство. Народ уперше за довгі роки відчув, що закон є не лише батогом сильного, а й щитом для скривдженого.",
+                                            TextEng = "At the same time as the sword in his hand, Monomakh also held the pen of a legislator. He issued a Statute in which he protected the weakest: he forbade usurers from taking debtors into slavery for small debts, limited the amount of interest, and streamlined the judicial process. For the first time in many years, the people felt that the law was not only a whip for the strong, but also a shield for the wronged."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Володимир не сидів у палатах — він об'їжджав міста й волості, відновлював укріплення, будував нові фортеці. Київ знову став перлиною серед руських земель, а Чернігів, Смоленськ, Переяславль за його волею підвелися після руїни. Купці повернулися на торжища, ремісники розпалили кузні, землероби знову орали родючі поля.",
+                                            TextEng = "Vladimir did not sit in the chambers - he traveled around the cities and volosts, restored fortifications, built new fortresses. Kyiv again became a pearl among the Rus' lands, and Chernihiv, Smolensk, Pereyaslavl rose from their ruins by his will. Merchants returned to the marketplaces, artisans fired up forges, farmers plowed fertile fields again."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Description = "Старість нахиляла його голову, але не ламала духу. Володимир до останнього дня тримав державу міцно, як батько тримає втомлене, але улюблене дитя. Його мудрість стала тим муром, об який розбивалися і половці, і свавілля князів, і жадоба боярства.\r\n\r\nТак минали роки, і вся Русь знала: поки є Мономах, є сила, є порядок, є надія. Але час невблаганний навіть до найкращих синів землі...\r\n\r\nПопереду чекала нова доба, і чи буде вона світлою — залежало вже не тільки від меча, а й від духу тих, хто залишиться після нього.",
+                                        DescriptionEng = "Old age bowed his head, but did not break his spirit. Vladimir held the state firmly until the last day, as a father holds a tired but beloved child. His wisdom became the wall against which the Polovtsy, the arbitrariness of the princes, and the greed of the boyars were smashed.\r\n\r\nThus the years passed, and all of Russia knew: as long as Monomakh exists, there is strength, there is order, there is hope. But time is inexorable even to the best sons of the earth...\r\n\r\nA new era awaited ahead, and whether it would be bright depended not only on the sword, but also on the spirit of those who would remain after him.",
+                                        Result = new List<Parametrs>()
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 200
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = 20
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 33,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Далі... Далі настав час, коли Мономах, відчувши наближення останнього шляху, скликав усіх своїх дітей, князів і бояр до себе. Його голос був уже не таким гучним, як колись на полі бою, але кожне слово, кожен його погляд важили більше за меч і золото.",
+                                            TextEng = "Then... Then came the time when Monomakh, sensing the approach of his final journey, summoned all his children, princes, and boyars to him. His voice was no longer as loud as it had once been on the battlefield, but every word, every look of his weighed more than a sword and gold."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Він заповідав єдність. Він благав синів не роздирати землю, не ламати те, що будував він кров'ю і потом. Говорив їм, як батько перед смертю ділить між дітьми свою мудрість: «Будьте, як браття однієї плоті, а не вовки, що роздирають один одного». Він лишив їм не скарби, а своє слово — «Повчання», де виклав усе, що сам пізнав за життя: як боротися з ворогами, як тримати віру і як не дати владі отруїти серце.",
+                                            TextEng = "He enjoined unity. He begged his sons not to tear up the earth, not to break what he had built with blood and sweat. He told them, as a father shares his wisdom among his children before his death: \"Be like brothers of one flesh, and not wolves tearing each other apart.\" He left them not treasures, but his word - \"Teachings\", where he laid out everything he had learned during his life: how to fight enemies, how to keep faith and how not to let power poison the heart."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "У 1125 році великий Володимир Мономах віддав свою душу Богові. Київ стояв у скорботі, і вся Русь, від синього Дніпра до суворих північних лісів, оплакала того, хто був їй справжнім батьком.\r\n\r\nТа не встигла земля вкрити його могилу, як над державою знову згущалися хмари. Його син, Мстислав Володимирович, який отримав престол, був гідним сином свого батька — сильним, розважливим, рішучим. Але кров княжа не завжди слухає волю померлого володаря.",
+                                            TextEng = "In 1125, the great Vladimir Monomakh gave up his soul to God. Kyiv stood in mourning, and all of Russia, from the blue Dnieper to the harsh northern forests, mourned the one who was her true father.\r\n\r\nBut the earth had no time to cover his grave when clouds again gathered over the state. His son, Mstislav Vladimirovich, who received the throne, was a worthy son of his father - strong, prudent, decisive. But the prince's blood does not always obey the will of the deceased ruler."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Удільні князі знову почали хитатися, мов зграя вовків, кожен тягнув ковдру на себе. Чвари поволі, наче іржа, точили єдність. Половці, відчувши слабкість, знову почали турбувати прикордонні міста. Київ утримувався, та скрізь на окраїнах уже тліли іскри нових смут.",
+                                            TextEng = "The princes of the Udil region began to totter again, like a pack of wolves, each pulling a blanket over himself. The quarrels slowly, like rust, were wearing away unity. The Polovtsians, sensing weakness, began to trouble the border towns again. Kyiv held out, but everywhere on the outskirts sparks of new unrest were already smoldering."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Мстислав, як міг, стримував розпад. Він продовжував політику батька, карав заколотників, збирав князів на з’їзди, укладав мир із Візантією, намагався тримати торгівлю й укріплювати кордони. Він розумів, що без спільного стягу Русь розпадеться на шматки, кожен із яких буде легкою здобиччю для половців, угорців, литовців чи німецьких мечоносців.",
+                                            TextEng = "Mstislav, as best he could, restrained the disintegration. He continued his father's policy, punished the rebels, gathered the princes for congresses, made peace with Byzantium, tried to maintain trade and strengthen the borders. He understood that without a common banner, Russia would fall into pieces, each of which would be easy prey for the Polovtsians, Hungarians, Lithuanians or German swordsmen."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Проте після його смерті у 1132 році Русь таки почала швидко хилитися до роздробленості. Київ залишався головою, але тіло держави вже тріщало по швах.\r\n\r\nНад землею, що недавно гордилася силою Мономаха, нависла тривожна тінь — тінь братовбивства і міжусобиць. Але ще жили ті, хто пам’ятав великого князя і його заповіт. І надія, хоч і слабка, ще жевріла, що прийде новий час і новий меч здійметься над Руссю.",
+                                            TextEng = "However, after his death in 1132, Rus did begin to rapidly drift towards fragmentation. Kiev remained the head, but the body of the state was already cracking at the seams.\r\n\r\nOver the land, which had recently been proud of the power of Monomakh, an alarming shadow hung - the shadow of fratricide and civil strife. But there were still those who remembered the great prince and his testament. And hope, albeit weak, still flickered that a new time would come and a new sword would be raised over Rus."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Далі — почалася доба, яку ми, озираючись, називаємо Руїною Русі. Після смерті Мстислава Великого розпочалося те, що стримував Володимир Мономах усім своїм життям: брат пішов на брата, син — проти батька, князь — проти князя.",
+                                            TextEng = "Then began the era that we, looking back, call the Ruin of Rus. After the death of Mstislav the Great, what Vladimir Monomakh had been holding back all his life began: brother turned against brother, son against father, prince against prince."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Київ і далі залишався омріяною здобиччю: хто сідав на київський стіл — той наче одягав корону всієї Русі. Але сила його вже була не та. Кожен з удільних князів вважав себе самостійним володарем, кожен плекав свої амбіції, шукав підтримки серед половців, угорців, литовців, поляків. Русь, яка ще недавно грізно котила свої полки в далекі степи і тримала в покорі сусідні народи, тепер сама стала здобиччю власної жадібності.",
+                                            TextEng = "Kyiv continued to be a coveted prey: whoever sat down at the Kyivan table was, as it were, wearing the crown of all of Russia. But its power was no longer the same. Each of the local princes considered himself an independent ruler, each cherished his own ambitions, sought support among the Polovtsians, Hungarians, Lithuanians, and Poles. Rus, which had recently menacingly rolled its regiments into the distant steppes and held neighboring peoples in subjection, now itself became a prey to its own greed."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Київські князі змінювалися один за одним, наче листя восени з дерев падає. Хто силою, хто підступом, хто з волі народного віче — кожен хотів урвати свою частку влади. Боротьба не вщухала ні на день: угодовці і войовники, зрадники і патріоти — всі переплелися в єдиному кривавому танці за владу.",
+                                            TextEng = "The Kiev princes changed one after another, like leaves falling from trees in autumn. Some by force, some by trickery, some by the will of the people's council - everyone wanted to snatch their share of power. The struggle did not subside for a day: compromisers and warriors, traitors and patriots - all intertwined in a single bloody dance for power."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "Північ піднімалася: могутніли Суздаль, Ростов, Переяславль. У ті землі ішли шукачі спокою і кращої долі, бо на півдні палали села й міста, князівські дружини й половці виривали один в одного землю і людей.",
+                                            TextEng = "The north was rising: Suzdal, Rostov, and Pereyaslavl were growing in power. Seekers of peace and a better fate went to those lands, because in the south villages and cities were burning, princely retinues and Polovtsy were wresting land and people from each other."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 10,
+                                            Text = "Половці, відчувши, що межа тримається лише на старій славі, стали нахабнішими. Вони вже не просто нападали — вони вимагали данину, втручалися у внутрішні справи князів, ставили свої умови.\r\n\r\nА Київ... Київ, велика мати руських міст, втратив колишню славу. Його багаті купці шукали безпечніших пристаней для своїх кораблів, його монастирі благали про мир у молитвах, його мечі ще блищали на сонці, але сили ставало все менше.",
+                                            TextEng = "The Polovtsians, feeling that the limit was only on their old glory, became more impudent. They no longer simply attacked - they demanded tribute, interfered in the internal affairs of the princes, set their own conditions.\r\n\r\nAnd Kiev... Kiev, the great mother of Rus`s cities, lost its former glory. Its rich merchants sought safer harbors for their ships, its monasteries begged for peace in prayers, its swords still glittered in the sun, but their strength was becoming less and less."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 11,
+                                            Text = "Та все ж таки пам’ять про колишню єдність жила. Жила в тих, хто ще не зрадив Русь ні золоту, ні мечу чужинців. Серед хаосу та зради ще часом здіймалися постаті князів, які мріяли об'єднати землю, знову підняти знамено великої держави.\r\n\r\nІ над усім цим стояло невидиме питання: хто буде тим, хто збере розпорошену Русь? Хто знову покладе меч до підніжжя Києва не для здобичі, а для служіння?",
+                                            TextEng = "But still the memory of the former unity lived. It lived in those who had not yet betrayed Rus' to either gold or the sword of foreigners. Amidst the chaos and betrayal, figures of princes still occasionally rose, dreaming of uniting the land, of raising the banner of a great state again.\r\n\r\nAnd above all this stood an invisible question: who would be the one to gather the scattered Rus'? Who would once again lay the sword at the foot of Kyiv not for plunder, but for service?"
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 12,
+                                            Text = "Найбільший вплив на цих землях здобули князі Володимиро-Суздальського, Чернігівського та Переяславського князівств, які почали змагатися за контроль над Києвом. Оскільки Київ став менш важливим через ослаблення його політичної позиції, престиж і стабільність почали зміщуватися в інші князівства. Це посилювало тенденцію до розпаду єдиної Русі на окремі князівства.",
+                                            TextEng = "The greatest influence in these lands was gained by the princes of the Vladimir-Suzdal, Chernigov, and Pereyaslav principalities, who began to compete for control of Kyiv. As Kyiv became less important due to the weakening of its political position, prestige and stability began to shift to other principalities. This strengthened the tendency for the disintegration of a unified Rus' into separate principalities."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 13,
+                                            Text = "Також важливим чинником став вплив половців, які неодноразово здійснювали набіги на Русь у цей період. Їхні напади були постійною загрозою для князівств, що сприяло ще більшому ослабленню централізованої влади. Боротьба з половцями вимагала від князів воєнних зусиль, але часто не вистачало єдності між ними, що лише ускладнювало ситуацію.",
+                                            TextEng = "Another important factor was the influence of the Polovtsy, who repeatedly raided Rus' during this period. Their attacks were a constant threat to the principalities, which contributed to the further weakening of centralized power. The fight against the Polovtsy required military efforts from the princes, but there was often a lack of unity between them, which only complicated the situation."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 14,
+                                            Text = "Через цей період частих змін князів на престолі Київське князівство стало символом розколу і політичної нестабільності, яка поступово призвела до ще більшого дроблення Русі на різні князівства, які часто були в стані боротьби між собою.",
+                                            TextEng = "Due to this period of frequent changes of princes on the throne, the Kievan Principality became a symbol of schism and political instability, which gradually led to the further fragmentation of Rus' into various principalities, which were often in a state of struggle with each other."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 15,
+                                            Text = "Після періоду частих змін князів на троні Київського князівства ситуація стабілізувалася лише частково. В кінці XII — на початку XIII століття, після періоду боротьби між різними князями за контроль над Києвом, почав формуватися новий порядок. Найбільший вплив на території Русі отримав великий князь київський, котрий намагався зберегти єдність держави, хоч і вже не з таким сильним централізованим контролем.",
+                                            TextEng = "After a period of frequent changes of princes on the throne of the Kievan principality, the situation stabilized only partially. At the end of the 12th - beginning of the 13th century, after a period of struggle between various princes for control over Kiev, a new order began to form. The greatest influence on the territory of Rus was received by the Grand Duke of Kiev, who tried to preserve the unity of the state, although no longer with such strong centralized control."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 16,
+                                            Text = "У 1169 році відбулася значуща подія — Андрій Боголюбський, великий князь Володимиро-Суздальський, захопив Київ. Це означало фактичний кінець періоду домінування Києва як політичного і культурного центру Русі. Володимиро-Суздальське князівство стало одним із найбільших і потужних, і з того часу його роль почала посилюватися, а Київ — втрачати своє значення.",
+                                            TextEng = "In 1169, a significant event occurred - Andrei Bogolyubsky, Grand Prince of Vladimir-Suzdal, captured Kyiv. This marked the actual end of the period of Kyiv's dominance as the political and cultural center of Rus. The Vladimir-Suzdal Principality became one of the largest and most powerful, and from that time its role began to grow, while Kyiv's importance began to decline."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 17,
+                                            Text = "Крім того, в цей час на Русі значно зміцнився вплив Південного заходу — Галицько-Волинське князівство, яке стало важливим політичним і економічним центром. Це також сприяло посиленню боротьби між князівствами, хоча їхні конфлікти часто були пов'язані з боротьбою за ресурси, землі та торгові шляхи.",
+                                            TextEng = "In addition, at this time, the influence of the South-West - the Galicia-Volhynia Principality, which became an important political and economic center, significantly strengthened in Rus'. This also contributed to the intensification of the struggle between the principalities, although their conflicts were often related to the struggle for resources, lands, and trade routes."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 18,
+                                            Text = "Згодом Київ знову потрапив під контроль місцевих князів, проте його значення для Русі вже суттєво зменшилося. Власне, з цього періоду можна вважати початок розпаду єдиної держави і її перехід до більш децентралізованої структури, що завершилося в XIII столітті зі зростанням могутності монголо-татарського хана Батия і навалою монголів.\r\n\r\nТаким чином, за наступні кілька століть Русь зазнала значних змін, а її державна структура стала менш стабільною, розділяючись на окремі князівства.",
+                                            TextEng = "Later, Kyiv again came under the control of local princes, but its importance for Rus had already significantly decreased. Actually, from this period we can consider the beginning of the collapse of the unified state and its transition to a more decentralized structure, which ended in the 13th century with the growth of the power of the Mongol-Tatar Khan Batu and the invasion of the Mongols.\r\n\r\nThus, over the next few centuries, Rus underwent significant changes, and its state structure became less stable, dividing into separate principalities."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 19,
+                                            Text = "Після того, як Київ втратив свою роль як політичний центр на Русі, боротьба між князівствами загострилася, і з кожним роком розрізненість держави ставала дедалі помітнішою. Володимиро-Суздальське князівство стало основною силою на північному сході Русі, в той час як Галицько-Волинське князівство набирало потужності на заході. Ці дві великі держави, які й до цього мали певні суперечності, почали активно боротися за вплив.",
+                                            TextEng = "After Kyiv lost its role as the political center of Rus, the struggle between the principalities intensified, and with each passing year the fragmentation of the state became more and more noticeable. The Vladimir-Suzdal principality became the main force in the northeast of Rus, while the Galicia-Volhynia principality gained power in the west. These two great states, which had already had certain contradictions, began to actively struggle for influence."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 20,
+                                            Text = "Розділеність наростала. Князі сварилися, заключали союзи й зраджували один одного. Кров лилася не лише в боях із зовнішнім ворогом, а й між братами-русами. І коли земля здригалася від кінських копит своїх, у полях було не чути пісень — тільки стогін мечів і прокляття поранених.",
+                                            TextEng = "The division grew. The princes quarreled, made alliances and betrayed each other. Blood was shed not only in battles with the external enemy, but also between the Rus brothers. And when the earth trembled from the hooves of their horses, no songs could be heard in the fields - only the groans of swords and the curses of the wounded."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 21,
+                                            Text = "Тим часом на сході, далеко за степами, народжувалася нова сила — монголи. Вони об'єднували розпорошені орди під єдиною рукою Чингісхана, творячи величезну військову машину, здатну розчавити цілі народи. Спочатку руси чули про них лише як про страшні чутки, як про бурю, що ніколи не дійде до їхніх земель.",
+                                            TextEng = "Meanwhile, in the east, far beyond the steppes, a new power was emerging - the Mongols. They united the scattered hordes under the single hand of Genghis Khan, creating a huge military machine capable of crushing entire peoples. At first, the Rus' heard of them only as terrible rumors, as a storm that would never reach their lands."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 22,
+                                            Text = "Але буря вже насувалася. У 1222 році перші розвідницькі загони монголів під проводом Субедея і Джебе зруйнували державу хорезмшахів, і, переслідуючи ворогів, почали проникати в половецькі степи. Половці, знесилені й розгромлені, звернулися до руських князів, просячи допомоги.",
+                                            TextEng = "But the storm was already approaching. In 1222, the first reconnaissance detachments of the Mongols under the leadership of Subedei and Jebe destroyed the state of the Khorezmshahs and, pursuing their enemies, began to penetrate the Polovtsian steppes. The Polovtsians, exhausted and defeated, turned to the Russian princes for help."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 23,
+                                            Text = "Важкі рішення стояли перед руськими володарями. Довелося кидати свої чвари й збиратися на раду. Тоді вперше за багато років руські князі об'єдналися, зібрали війська й рушили на допомогу половцям. Їх об'єднало не бажання братства, а страх перед невідомим ворогом, що нищив усе на своєму шляху.",
+                                            TextEng = "Difficult decisions faced the Rus' rulers. They had to put aside their quarrels and gather for a council. Then, for the first time in many years, the Rus' princes united, gathered their troops, and set out to help the Polovtsy. They were united not by a desire for brotherhood, but by fear of an unknown enemy that was destroying everything in its path."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 24,
+                                            Text = "На цих гнилих коренях невпевненого союзу і виросла похідна дружина, що врешті зійдеться з монголами на берегах річки Калки — з надією на перемогу і вірою в свою силу, але ще не знаючи, яка прірва чекає їх попереду.",
+                                            TextEng = "On these rotten roots of an uncertain alliance grew the marching army that would eventually meet the Mongols on the banks of the Kalka River — with hope for victory and faith in their strength, but not yet knowing what abyss awaited them ahead."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 25,
+                                            Text = "Світ стояв на порозі бурі, і ми, князі руські, вперше за довгий час сіли разом — не заради суперечок про межі, не задля кривд і сварок за Київ, а щоб дати відповідь новій, нечуваній загрозі. Половецький хан Котян прибув до нас — не з гордістю, а з благанням. Він впав на коліна перед престолами тих, кого ще вчора вважав ворогами. Його очі були очима людини, що бачила пекло і вижила. Його слова були, мов крик вирваного з серця: «Монголи йдуть. Нас не стане. Ви будете наступними».",
+                                            TextEng = "The world stood on the threshold of a storm, and we, the princes of Rus, sat together for the first time in a long time - not for the sake of disputes about borders, not for grievances and quarrels over Kyiv, but to respond to a new, unprecedented threat. The Polovtsian Khan Kotyan arrived to us - not with pride, but with a plea. He fell to his knees before the thrones of those whom he had considered enemies only yesterday. His eyes were the eyes of a man who had seen hell and survived. His words were like a cry torn from the heart: \"The Mongols are coming. We will not be enough. You will be next.\""
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 26,
+                                            Text = "Тоді ми, Ярослав Володимирович, Мстислав Удатний, Мстислав Романович Київський та інші, зібрали велику раду. Щити підперли стіни, мечі поклали на дошки — не для сварки, а як обітницю. Ми згадали давню присягу братерства, ще з часів, коли русин стояв за русина, і вирішили: рушимо разом, об’єднаємо сили з половцями, вдаримо першими — поки вони не дісталися наших дітей, наших церков, наших земель.",
+                                            TextEng = "Then we, Yaroslav Volodymyrovych, Mstislav Udatny, Mstislav Romanovych of Kyiv and others, gathered a great council. We propped up the walls with shields, laid our swords on boards — not for a quarrel, but as a vow. We remembered the ancient oath of brotherhood, from the times when a Ruthenian stood for a Ruthenian, and decided: let us move together, join forces with the Polovtsy, strike first — before they get to our children, our churches, our lands."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 27,
+                                            Text = "З Володимира і Галича рушили тисячі ратників — кінні, піші, зі списами й луками, з бойовими сокирами і бронзовими натільниками. Сузір’я дружинників потяглося по річках і рівнинах на схід. Кожен загін мав свого прапороносця, кожен мав свою клятву — не повернутись, поки степ не буде очищено.",
+                                            TextEng = "Thousands of warriors set out from Volodymyr and Halych — on horseback, on foot, with spears and bows, with battle axes and bronze breastplates. The constellation of warriors stretched along the rivers and plains to the east. Each detachment had its own standard-bearer, each had its own oath — not to return until the steppe was cleared."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 28,
+                                            Text = "Половці дали нам провідників. Ми йшли невідомими стежками, але з вірою в себе. А в самому серці — тривога. Ми не знали ворога. Ми не знали, скільки їх, які вони, що за звір той, що зветься монголом. І хоч князі кріпили один одного словом і молитвою, в очах бояр уже читалася стримана підозра — чи не ведуть нас чужинці на згубу?",
+                                            TextEng = "The Polovtsy gave us guides. We walked along unknown paths, but with faith in ourselves. And in our hearts there was anxiety. We did not know the enemy. We did not know how many there were, what kind of beast they were, what kind of beast was this Mongol. And although the princes strengthened each other with words and prayers, a restrained suspicion was already visible in the eyes of the boyars - were the strangers leading us to destruction?"
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Калка",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Бій"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість ворожої армії",
+                                                Value = 20000
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 2,
+                                                Name = "Бойовий дух ворожої армії",
+                                                Value = 90
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 3,
+                                                Name = "Організація ворожої армії",
+                                                Value = 90
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 4,
+                                                Name = "default"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 5,
+                                                Name = "default"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 6,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 33
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 7,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = 10
+                                            }
                                         }
                                     }
                                 }

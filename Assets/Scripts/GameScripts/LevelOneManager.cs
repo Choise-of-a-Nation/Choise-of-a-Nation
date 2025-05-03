@@ -70,8 +70,8 @@ namespace Assets.Scripts.GameScripts
                 }
                 if (PlayerPrefs.GetString("WhoWin") == "enemy")
                 {
-                    PlayerPrefs.SetString("textLose", "На жаль ви програли, ваш вплив послабився. Цим скористалися вороги і опозиція, скинувши вас і захопивши владу.");
-                    PlayerPrefs.SetString("textEngLose", "На жаль ви програли, ваш вплив послабився. Цим скористалися вороги і опозиція, скинувши вас і захопивши владу.");
+                    PlayerPrefs.SetString("textLose", "На жаль ви програли, ваш вплив послабився. Цим скористалися вороги і опозиція, скинувши вас, захопила владу.");
+                    PlayerPrefs.SetString("textEngLose", "Unfortunately, you lost, your influence weakened. Your enemies and the opposition took advantage of this, overthrowing you and seizing power.");
                     SceneManager.LoadSceneAsync(3);
                 }
 
