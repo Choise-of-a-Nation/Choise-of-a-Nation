@@ -2,6 +2,7 @@
 using Assets.Scripts.Menu.Settings.Localization;
 using GameLogic.Functions.SaveLoad;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -100,6 +101,10 @@ namespace Assets.Scripts.GameScripts
                 BackSave();
                 PlayerPrefs.SetInt("EnterChoise", -1);
             }
+
+            pidtr.text = ((game.Levels[0].CountriesOpen[0].Parametrs[0].Value + game.Levels[0].CountriesOpen[0].Parametrs[1].Value + game.Levels[0].CountriesOpen[0].Parametrs[2].Value) / 3).ToString() + "%";
+            stanArmy.text = game.Levels[0].CountriesOpen[0].Parametrs[3].Value.ToString() + "%";
+            kazna.text = game.Levels[0].CountriesOpen[0].Parametrs[4].Value.ToString();
         }
 
         public void BackSave()
@@ -134,9 +139,9 @@ namespace Assets.Scripts.GameScripts
                     PlayerPrefs.SetString("EnemyLeader", game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[5].Name);
                     PlayerPrefs.SetInt("OurArmy", game.Levels[0].CountriesOpen[0].Parametrs[5].Value);
                     PlayerPrefs.SetInt("EnemyArmy", game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[1].Value);
-                    PlayerPrefs.SetInt("OurOrg", (int)(50 + ((game.Levels[0].CountriesOpen[0].Parametrs[0].Value / 100f) * 50)));
+                    PlayerPrefs.SetInt("OurOrg", (int)(50 + ((game.Levels[0].CountriesOpen[0].Parametrs[0].Value / 100f) * game.Levels[0].CountriesOpen[0].Parametrs[3].Value)));
                     PlayerPrefs.SetInt("EnemyOrg", game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[3].Value);
-                    PlayerPrefs.SetInt("OurBoyDuh", (int)(50 + ((game.Levels[0].CountriesOpen[0].Parametrs[1].Value / 100f) * 50)));
+                    PlayerPrefs.SetInt("OurBoyDuh", (int)(50 + ((game.Levels[0].CountriesOpen[0].Parametrs[1].Value / 100f) * game.Levels[0].CountriesOpen[0].Parametrs[3].Value)));
                     PlayerPrefs.SetInt("EnemyBoyDuh", game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[2].Value);
                     PlayerPrefs.SetInt("Level", 0);
                     PlayerPrefs.SetInt("Country", 0);
@@ -184,6 +189,45 @@ namespace Assets.Scripts.GameScripts
                 SceneManager.LoadSceneAsync(4);
                 PlayerPrefs.SetString("textWin", "Кінець Київської держави став завершенням величної епохи, яка залишила по собі незабутній слід в історії. Внутрішні чвари між князями, які не змогли об’єднатися перед обличчям зовнішньої загрози, та навала монгольських орд у 1240 році зруйнували основи колись могутньої держави. Київ, серце Русі, упав після облоги, і його величні храми й стіни перетворилися на попелище.\r\n\r\nПроте ця трагедія не означала остаточного кінця. Дух Київської Русі, її культура і віра, продовжили жити, перейшовши до нових центрів, таких як Володимиро-Суздальська земля та пізніше Московія. Русь не загинула — вона трансформувалася, залишивши світові урок про важливість єдності перед викликами часу.\r\n\r\nГра завершена. Але історія Київської держави надихає й досі.");
                 PlayerPrefs.SetString("textWinEng", "The end of the Kievan Rus’ was the end of a great era that left an unforgettable mark on history. Internal strife between princes who could not unite in the face of an external threat, and the invasion of the Mongol hordes in 1240 destroyed the foundations of the once powerful state. Kiev, the heart of Rus’, fell after a siege, and its majestic temples and walls were reduced to ashes.\r\n\r\nHowever, this tragedy did not mean the final end. The spirit of Kievan Rus’, its culture and faith, continued to live on, moving to new centers, such as the Vladimir-Suzdal land and later Muscovy. Rus’ did not perish — it transformed, leaving the world a lesson about the importance of unity in the face of the challenges of time.\r\n\r\nThe game is over. But the history of the Kievan Rus’ is still inspiring.");
+            }
+
+            BackSave();
+        }
+
+        public void EditInfluence(string nameBut)
+        {
+            if (game.Levels[0].CountriesOpen[0].Parametrs[4].Value > 100)
+            {
+                if (nameBut == "Elite")
+                {
+                    game.Levels[0].CountriesOpen[0].Parametrs[0].Value += 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[2].Value -= 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[4].Value -= 100;
+                    Debug.Log("Click");
+                }
+                if (nameBut == "Army")
+                {
+                    game.Levels[0].CountriesOpen[0].Parametrs[1].Value += 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[0].Value -= 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[4].Value -= 100;
+                }
+                if (nameBut == "People")
+                {
+                    game.Levels[0].CountriesOpen[0].Parametrs[2].Value += 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[0].Value -= 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[4].Value -= 100;
+                }
+                if (nameBut == "Stan")
+                {
+                    game.Levels[0].CountriesOpen[0].Parametrs[3].Value += 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[0].Value -= 10;
+                    game.Levels[0].CountriesOpen[0].Parametrs[4].Value -= 100;
+                }
+                if (nameBut == "Army")
+                {
+                    game.Levels[0].CountriesOpen[0].Parametrs[5].Value += 1000;
+                    game.Levels[0].CountriesOpen[0].Parametrs[4].Value -= 100;
+                }
             }
 
             BackSave();
