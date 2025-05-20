@@ -1,20 +1,41 @@
-﻿using System;
+﻿using Assets.Scripts.Clasess;
+using Assets.Scripts.Clasess.Profile;
+using GameLogic.Functions.SaveLoad;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
+using Newtonsoft.Json;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.GameScripts
 {
     public class ProfileManager : MonoBehaviour
     {
         private string profileUrl = "https://choiseofanation.tryasp.net/register/get-user/";
+        Load load = new Load();
+        Save save = new Save();
+        Game game;
+
+        public Button prBut;
+        public RawImage logo;
+        public Text nameTxt;
+        public Text emailTxt;
+        public Text plHoursTxt;
+
+        private void Start()
+        {
+            game = load.LoadStartInfo();
+        }
 
         public void FetchProfile(string token)
         {
             Debug.Log("Отримано токен у ProfileManager. Старт декодування...");
             string userId = ExtractUserIdFromToken(token);
+            PlayerPrefs.SetString("token", token);
+            PlayerPrefs.SetString("id-user", userId);
 
             if (!string.IsNullOrEmpty(userId))
             {
@@ -38,10 +59,66 @@ namespace Assets.Scripts.GameScripts
             if (request.result == UnityWebRequest.Result.Success)
             {
                 Debug.Log("✅ Отримані дані профілю: " + request.downloadHandler.text);
+                Player newPl = JsonConvert.DeserializeObject<Player>(request.downloadHandler.text);
+                Debug.Log("Email: " + newPl.Email);
+                game.PlayerData = newPl;
+                save.SaveStartGame(game);
+                LoadImageFromPlayer(game.PlayerData);
+                nameTxt.text = "Ім'я " + newPl.FirstName + " " + newPl.LastName;
+                emailTxt.text = "Пошта " + newPl.Email;
+                plHoursTxt.text = "Кількість зіграних годин " + ((float)newPl.PlayedHours / 60 / 60).ToString();
             }
             else
             {
                 Debug.LogError("❌ Помилка отримання профілю: " + request.error);
+            }
+        }
+
+        public void LoadImageFromPlayer(Player player)
+        {
+            if (!string.IsNullOrEmpty(player.Url))
+            {
+                StartCoroutine(DownloadImage(player.Url));
+            }
+            else
+            {
+                Debug.LogWarning("URL зображення порожній.");
+            }
+        }
+
+        IEnumerator DownloadImage(string url)
+        {
+            UnityWebRequest request = UnityWebRequestTexture.GetTexture(url);
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Texture2D texture = DownloadHandlerTexture.GetContent(request);
+
+                if (texture == null || texture.width == 0 || texture.height == 0)
+                {
+                    Debug.LogError("❌ Завантажено пошкоджену або порожню текстуру.");
+                    yield break;
+                }
+
+                Sprite sprite = Sprite.Create(
+                    texture,
+                    new Rect(0, 0, texture.width, texture.height),
+                    new Vector2(0.5f, 0.5f)
+                );
+
+                if (prBut == null || prBut.image == null)
+                {
+                    Debug.LogError("❌ Кнопка або її Image-компонент не призначено!");
+                    yield break;
+                }
+
+                prBut.image.sprite = sprite;
+                logo.texture = texture;
+            }
+            else
+            {
+                Debug.LogError("❌ Не вдалося завантажити зображення: " + request.error);
             }
         }
 

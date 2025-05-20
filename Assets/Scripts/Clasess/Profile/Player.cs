@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,30 @@ namespace Assets.Scripts.Clasess.Profile
     [Serializable]
     public class Player
     {
-        public int Id;
-        public string Name;
+        [JsonProperty("firstName")]
+        public string FirstName;
+
+        [JsonProperty("lastName")]
+        public string LastName;
+
+        [JsonProperty("email")]
         public string Email;
-        public List<Achievements> AchievementsOpen = new List<Achievements>();
+
+        [JsonProperty("url")]
+        public string Url;
+
+        [JsonProperty("playedHours")]
+        public int PlayedHours;
+
+        [JsonProperty("phoneNumber")]
+        public string PhoneNumber;
+
+        [JsonProperty("userName")]
+        public string UserName;
+
+        [JsonProperty("id")]
+        public string Id;
+
+        //public List<Achievements> AchievementsOpen = new List<Achievements>();
     }
 }

@@ -3237,19 +3237,13 @@ namespace Assets.Scripts.Initilization
             return new Game()
             {
                 Id = 0,
-                PlayerData = new Player()
-                {
-                    Id = 0,
-                    Name = "Default Name",
-                    Email = "",
-                    AchievementsOpen = new List<Achievements>()
-                },
+                PlayerData = new Player(),
                 Levels = levels,
                 Achievements = new List<Achievements>()
             };
         }
 
-        private void Start()
+        private void Awake()
         {
             List<Parametrs> parametrs = new List<Parametrs>();
             List<Level> levels = new List<Level>();

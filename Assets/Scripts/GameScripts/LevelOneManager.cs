@@ -1,10 +1,13 @@
 ﻿using Assets.Scripts.Clasess;
 using Assets.Scripts.Menu.Settings.Localization;
 using GameLogic.Functions.SaveLoad;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -28,6 +31,10 @@ namespace Assets.Scripts.GameScripts
 
         int idText = 0;
         int idTurn = 0;
+
+        float startTime = Time.time;
+
+        private string updateUrl = "https://choiseofanation.tryasp.net/register/update-hours/";
 
         // Use this for initialization
         void Start()
@@ -110,6 +117,39 @@ namespace Assets.Scripts.GameScripts
         public void BackSave()
         {
             save.SavePlayers(game);
+            SendPlayedTime(game.PlayerData.PlayedHours, PlayerPrefs.GetString("token"), PlayerPrefs.GetString("id-user"));
+        }
+
+        public void SendPlayedTime(int addedHours, string token, string userId)
+        {
+            UpdateHoursRequest requestData = new UpdateHoursRequest
+            {
+                AddedHours = addedHours
+            };
+
+            string json = JsonUtility.ToJson(requestData);
+            StartCoroutine(PostPlayedHours(json, token, userId));
+        }
+
+        IEnumerator PostPlayedHours(string json, string token, string userId)
+        {
+            UnityWebRequest request = new UnityWebRequest(updateUrl + userId, "POST");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("✅ Години успішно оновлено: " + request.downloadHandler.text);
+            }
+            else
+            {
+                Debug.LogError("❌ Помилка при оновленні годин: " + request.error + " | " + request.downloadHandler.text);
+            }
         }
 
         public void Back()
@@ -191,6 +231,8 @@ namespace Assets.Scripts.GameScripts
                 PlayerPrefs.SetString("textWinEng", "The end of the Kievan Rus’ was the end of a great era that left an unforgettable mark on history. Internal strife between princes who could not unite in the face of an external threat, and the invasion of the Mongol hordes in 1240 destroyed the foundations of the once powerful state. Kiev, the heart of Rus’, fell after a siege, and its majestic temples and walls were reduced to ashes.\r\n\r\nHowever, this tragedy did not mean the final end. The spirit of Kievan Rus’, its culture and faith, continued to live on, moving to new centers, such as the Vladimir-Suzdal land and later Muscovy. Rus’ did not perish — it transformed, leaving the world a lesson about the importance of unity in the face of the challenges of time.\r\n\r\nThe game is over. But the history of the Kievan Rus’ is still inspiring.");
             }
 
+            game.PlayerData.PlayedHours += (int)(Time.time - startTime);
+
             BackSave();
         }
 
@@ -231,6 +273,12 @@ namespace Assets.Scripts.GameScripts
             }
 
             BackSave();
+        }
+
+        [Serializable]
+        public class UpdateHoursRequest
+        {
+            public int AddedHours;
         }
     }
 }
