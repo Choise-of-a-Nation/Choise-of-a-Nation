@@ -32,11 +32,12 @@ namespace Assets.Scripts.GameScripts
         {
             isOpen = true;
             game = load.LoadStartInfo();
-        }
+            if (game == null || game.Levels == null)
+            {
+                Debug.LogError("Game data is null!");
+                return;
+            }
 
-        // Update is called once per frame
-        void Update()
-        {
             if (isOpen)
             {
                 foreach (Transform child in contentPar.transform)
@@ -47,10 +48,10 @@ namespace Assets.Scripts.GameScripts
                 {
                     GameObject curEff = Instantiate(levelPr, contentPar.transform);
                     curEff.transform.position = new Vector3(curEff.transform.position.x - (2 * i), curEff.transform.position.y, curEff.transform.position.z);
-                    
+
                     texts = curEff.GetComponentsInChildren<Text>();
-                    foreach(Text text in texts) 
-                    { 
+                    foreach (Text text in texts)
+                    {
                         if (text.name == "Name")
                         {
                             nameLev = text;
@@ -74,6 +75,12 @@ namespace Assets.Scripts.GameScripts
                 }
                 isOpen = false;
             }
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
         }
 
         public void PlayLevel(int id)
