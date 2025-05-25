@@ -3232,14 +3232,57 @@ namespace Assets.Scripts.Initilization
             };
         }
 
-        public Game InitGame(List<Level> levels)
+        public List<Achievements> InitAchivs()
+        {
+            return new List<Achievements>()
+            {
+                new Achievements()
+                {
+                    Id = 0,
+                    Name = "Перша перемога",
+                    NameEng = "First win",
+                    Description = "Вм перемогли в своїй першій битві",
+                    DescriptionEng = "You win in first battle",
+                    IconUrl = "https://d1red3q7jhuy4m.cloudfront.net/6a/ae/51c3-2afd-5c44-bf1b-931f430e90c0.jpg"
+                },
+                new Achievements()
+                {
+                    Id = 1,
+                    Name = "Перша поразка",
+                    NameEng = "First lose",
+                    Description = "Ви вперше програли у битві",
+                    DescriptionEng = "You first lose in battle",
+                    IconUrl = "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/1151130/49f31c471f954cd4214267530b63e408a3c28d63.jpg"
+                },
+                new Achievements()
+                {
+                    Id = 2,
+                    Name = "Історичне закінчення 1 рівня",
+                    NameEng = "History end 1 level",
+                    Description = "Історичне завершення першого рівня",
+                    DescriptionEng = "History end first level",
+                    IconUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-IxwKJ456bRwiGaf1yHEnpw0_wb8RydCI6w&s"
+                },
+                new Achievements()
+                {
+                    Id = 3,
+                    Name = "Не історичне закінчення 1 рівня",
+                    NameEng = "Non history end 1 level",
+                    Description = "Не історичне завершення першого рівня",
+                    DescriptionEng = "Non history end first level",
+                    IconUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLyKl2MfAdYX92ipU21Ijxpcn1bQAhXjmWiA&s"
+                }
+            };
+        }
+
+        public Game InitGame(List<Level> levels, List<Achievements> achivs)
         {
             return new Game()
             {
                 Id = 0,
                 PlayerData = new Player(),
                 Levels = levels,
-                Achievements = new List<Achievements>()
+                Achievements = achivs
             };
         }
 
@@ -3247,11 +3290,13 @@ namespace Assets.Scripts.Initilization
         {
             List<Parametrs> parametrs = new List<Parametrs>();
             List<Level> levels = new List<Level>();
+            List<Achievements> achievements = new List<Achievements>();
 
             parametrs = InitParam();
             levels = InitLevels(parametrs);
+            achievements = InitAchivs();
 
-            Game game = InitGame(levels);
+            Game game = InitGame(levels, achievements);
             Save save = new Save();
             save.SaveStartGame(game);
             PlayerPrefs.SetString("OurLeader", "");
