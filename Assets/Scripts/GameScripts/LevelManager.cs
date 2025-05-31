@@ -85,9 +85,9 @@ namespace Assets.Scripts.GameScripts
 
         public void PlayLevel(int id)
         {
-            SceneManager.LoadSceneAsync(id + 5);
             game.idLevCur = 0;
             save.SavePlayers(game);
+            SceneManager.LoadSceneAsync(id + 5);
         }
     }
 }

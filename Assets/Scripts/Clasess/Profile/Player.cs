@@ -33,7 +33,5 @@ namespace Assets.Scripts.Clasess.Profile
 
         [JsonProperty("id")]
         public string Id;
-
-        //public List<Achievements> AchievementsOpen = new List<Achievements>();
     }
 }
