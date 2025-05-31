@@ -3262,15 +3262,6 @@ namespace Assets.Scripts.Initilization
                     Description = "Історичне завершення першого рівня",
                     DescriptionEng = "History end first level",
                     IconUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-IxwKJ456bRwiGaf1yHEnpw0_wb8RydCI6w&s"
-                },
-                new Achievements()
-                {
-                    Id = 3,
-                    Name = "Не історичне закінчення 1 рівня",
-                    NameEng = "Non history end 1 level",
-                    Description = "Не історичне завершення першого рівня",
-                    DescriptionEng = "Non history end first level",
-                    IconUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLyKl2MfAdYX92ipU21Ijxpcn1bQAhXjmWiA&s"
                 }
             };
         }

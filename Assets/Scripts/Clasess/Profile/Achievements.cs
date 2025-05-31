@@ -15,6 +15,6 @@ namespace Assets.Scripts.Clasess.Profile
         public string Description;
         public string DescriptionEng;
         public string IconUrl;
-        public bool isOk = false;
+        public bool isOk;
     }
 }

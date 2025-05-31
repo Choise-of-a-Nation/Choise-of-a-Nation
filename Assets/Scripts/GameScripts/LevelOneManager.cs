@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Clasess;
+using Assets.Scripts.Clasess.Profile;
 using Assets.Scripts.Menu.Settings.Localization;
 using GameLogic.Functions.SaveLoad;
 using System;
@@ -9,7 +10,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using static Assets.Scripts.GameScripts.AchiventmentsManager;
 
 namespace Assets.Scripts.GameScripts
 {
@@ -35,6 +38,7 @@ namespace Assets.Scripts.GameScripts
         float startTime = Time.time;
 
         private string updateUrl = "https://choiseofanation.tryasp.net/register/update-hours/";
+        private string updateUrlAchiv = "https://choiseofanation.tryasp.net/register/update-achivs/";
 
         // Use this for initialization
         void Start()
@@ -75,9 +79,25 @@ namespace Assets.Scripts.GameScripts
                     textContent.text = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].Text;
                     textContent.GetComponent<TextLanguage>().textUkr = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].Text;
                     textContent.GetComponent<TextLanguage>().textEng = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].TextEng;
+
+                    if (!game.Achievements[0].isOk)
+                    {
+                        game.Achievements[0].isOk = true;
+                        BackSave();
+                        SendUpdateAchiv(game.Achievements[0], PlayerPrefs.GetString("token"), PlayerPrefs.GetString("id-user"));
+                        Debug.Log("Achiv: " + game.Achievements[0].Name);
+                    }
                 }
                 if (PlayerPrefs.GetString("WhoWin") == "enemy")
                 {
+                    if (!game.Achievements[1].isOk)
+                    {
+                        game.Achievements[1].isOk = true;
+                        BackSave();
+                        SendUpdateAchiv(game.Achievements[0], PlayerPrefs.GetString("token"), PlayerPrefs.GetString("id-user"));
+                        Debug.Log("Achiv: " + game.Achievements[1].Name);
+                    }
+
                     PlayerPrefs.SetString("textLose", "На жаль ви програли, ваш вплив послабився. Цим скористалися вороги і опозиція, скинувши вас, захопила владу.");
                     PlayerPrefs.SetString("textEngLose", "Unfortunately, you lost, your influence weakened. Your enemies and the opposition took advantage of this, overthrowing you and seizing power.");
                     SceneManager.LoadSceneAsync(3);
@@ -149,6 +169,44 @@ namespace Assets.Scripts.GameScripts
             else
             {
                 Debug.LogError("❌ Помилка при оновленні годин: " + request.error + " | " + request.downloadHandler.text);
+            }
+        }
+
+        public void SendUpdateAchiv(Achievements achievement, string token, string userId)
+        {
+            UpdateAchivsDTO requestData = new UpdateAchivsDTO
+            {
+                Id = achievement.Id,
+                Name = achievement.Name,
+                NameEng = achievement.NameEng,
+                Description = achievement.Description,
+                DescriptionEng = achievement.DescriptionEng,
+                IconUrl = achievement.IconUrl,
+                isOk = achievement.isOk
+            };
+
+            string json = JsonUtility.ToJson(requestData);
+            StartCoroutine(PostAchiv(json, token, userId));
+        }
+
+        IEnumerator PostAchiv(string json, string token, string userId)
+        {
+            UnityWebRequest request = new UnityWebRequest(updateUrlAchiv + userId, "POST");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("✅ Досягнення успішно оновлено: " + request.downloadHandler.text);
+            }
+            else
+            {
+                Debug.LogError("❌ Помилка при оновленні досягнень: " + request.error + " | " + request.downloadHandler.text);
             }
         }
 
@@ -226,6 +284,14 @@ namespace Assets.Scripts.GameScripts
 
             if (idTurn >= game.Levels[0].CountriesOpen[0].Turns.Count)
             {
+                if (!game.Achievements[2].isOk)
+                {
+                    game.Achievements[2].isOk = true;
+                    BackSave();
+                    SendUpdateAchiv(game.Achievements[0], PlayerPrefs.GetString("token"), PlayerPrefs.GetString("id-user"));
+                    Debug.Log("Achiv: " + game.Achievements[2].Name);
+                }
+
                 SceneManager.LoadSceneAsync(4);
                 PlayerPrefs.SetString("textWin", "Кінець Київської держави став завершенням величної епохи, яка залишила по собі незабутній слід в історії. Внутрішні чвари між князями, які не змогли об’єднатися перед обличчям зовнішньої загрози, та навала монгольських орд у 1240 році зруйнували основи колись могутньої держави. Київ, серце Русі, упав після облоги, і його величні храми й стіни перетворилися на попелище.\r\n\r\nПроте ця трагедія не означала остаточного кінця. Дух Київської Русі, її культура і віра, продовжили жити, перейшовши до нових центрів, таких як Володимиро-Суздальська земля та пізніше Московія. Русь не загинула — вона трансформувалася, залишивши світові урок про важливість єдності перед викликами часу.\r\n\r\nГра завершена. Але історія Київської держави надихає й досі.");
                 PlayerPrefs.SetString("textWinEng", "The end of the Kievan Rus’ was the end of a great era that left an unforgettable mark on history. Internal strife between princes who could not unite in the face of an external threat, and the invasion of the Mongol hordes in 1240 destroyed the foundations of the once powerful state. Kiev, the heart of Rus’, fell after a siege, and its majestic temples and walls were reduced to ashes.\r\n\r\nHowever, this tragedy did not mean the final end. The spirit of Kievan Rus’, its culture and faith, continued to live on, moving to new centers, such as the Vladimir-Suzdal land and later Muscovy. Rus’ did not perish — it transformed, leaving the world a lesson about the importance of unity in the face of the challenges of time.\r\n\r\nThe game is over. But the history of the Kievan Rus’ is still inspiring.");

@@ -66,7 +66,7 @@ namespace Assets.Scripts.GameScripts
                 LoadImageFromPlayer(game.PlayerData);
                 nameTxt.text = "Ім'я " + newPl.FirstName + " " + newPl.LastName;
                 emailTxt.text = "Пошта " + newPl.Email;
-                plHoursTxt.text = "Кількість зіграних годин " + ((float)newPl.PlayedHours / 60 / 60).ToString();
+                plHoursTxt.text = "Кількість зіграних годин " + ((float)newPl.PlayedHours / 3600 / 3600 / 60).ToString();
             }
             else
             {

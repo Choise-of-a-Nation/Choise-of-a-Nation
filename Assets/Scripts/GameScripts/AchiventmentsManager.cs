@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine.SocialPlatforms.Impl;
 using Assets.Scripts.Clasess.Profile;
+using System.Text;
+using System;
 
 namespace Assets.Scripts.GameScripts
 {
@@ -29,6 +31,8 @@ namespace Assets.Scripts.GameScripts
         Text isOkAch;
         RawImage imgAch;
 
+        private string updateUrl = "https://choiseofanation.tryasp.net/register/get-achiv-is-ok/";
+
         void Start()
         {
             
@@ -37,7 +41,7 @@ namespace Assets.Scripts.GameScripts
         public void Open()
         {
             isOpen = true;
-            game = load.LoadStartInfo();
+            game = load.LoadStartInfo(); 
             if (game == null || game.Levels == null)
             {
                 Debug.LogError("Game data is null!");
@@ -54,54 +58,83 @@ namespace Assets.Scripts.GameScripts
                 {
                     Destroy(child.gameObject);
                 }
+
                 for (int i = 0; i < game.Achievements.Count; i++)
                 {
-                    GameObject curEff = Instantiate(anchivPr, contentPar.transform);
-                    curEff.transform.position = new Vector3(curEff.transform.position.x - (2 * i), curEff.transform.position.y, curEff.transform.position.z);
-
-                    texts = curEff.GetComponentsInChildren<Text>();
-                    foreach (Text text in texts)
-                    {
-                        if (text.name == "Name")
-                        {
-                            nameAch = text;
-                        }
-                        if (text.name == "Description")
-                        {
-                            descAch = text;
-                        }
-                        if (text.name == "isOk")
-                        {
-                            isOkAch = text;
-                        }
-                    }
-
-                    nameAch.GetComponent<TextLanguage>().textUkr = game.Achievements[i].Name;
-                    nameAch.GetComponent<TextLanguage>().textEng = game.Achievements[i].NameEng;
-                    nameAch.text = game.Achievements[i].Name;
-                    descAch.GetComponent<TextLanguage>().textUkr = game.Achievements[i].Description;
-                    descAch.GetComponent<TextLanguage>().textEng = game.Achievements[i].DescriptionEng;
-                    descAch.text = game.Achievements[i].Description;
-
-                    if (game.Achievements[i].isOk)
-                    {
-                        isOkAch.GetComponent<TextLanguage>().textUkr = "Отримано";
-                        isOkAch.GetComponent<TextLanguage>().textEng = "Received";
-                        isOkAch.text = "Отримано";
-                    }
-                    if (!game.Achievements[i].isOk)
-                    {
-                        isOkAch.GetComponent<TextLanguage>().textUkr = "Не отримано";
-                        isOkAch.GetComponent<TextLanguage>().textEng = "Not received";
-                        isOkAch.text = "Не отримано";
-                    }
-
-                    imgAch = curEff.GetComponentInChildren<RawImage>();
-                    LoadImage(game.Achievements[i], imgAch);
+                    StartCoroutine(GetIsOkAchiv(PlayerPrefs.GetString("token"), PlayerPrefs.GetString("id-user"), game.Achievements[i], i));
                 }
+
                 isOpen = false;
             }
         }
+
+        public void GetIsOk(string token, string userId, Achievements achievement)
+        {
+            StartCoroutine(GetIsOkAchiv(token, userId, achievement, achievement.Id));
+        }
+
+        IEnumerator GetIsOkAchiv(string token, string userId, Achievements achievement, int index)
+        {
+            UnityWebRequest request = new UnityWebRequest($"{updateUrl}{userId}", "POST");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes($"\"{achievement.Name}\"");
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("✅ isOk отримано: " + request.downloadHandler.text);
+                achievement.isOk = request.downloadHandler.text == "true";
+            }
+            else
+            {
+                Debug.LogError("❌ Помилка при отриманні: " + request.error + " | " + request.downloadHandler.text);
+                achievement.isOk = false;
+            }
+
+            // Створення UI після отримання відповіді
+            GameObject curEff = Instantiate(anchivPr, contentPar.transform);
+            curEff.transform.position = new Vector3(curEff.transform.position.x - (2 * index), curEff.transform.position.y, curEff.transform.position.z);
+
+            texts = curEff.GetComponentsInChildren<Text>();
+            foreach (Text text in texts)
+            {
+                if (text.name == "Name")
+                    nameAch = text;
+                if (text.name == "Description")
+                    descAch = text;
+                if (text.name == "isOk")
+                    isOkAch = text;
+            }
+
+            nameAch.GetComponent<TextLanguage>().textUkr = achievement.Name;
+            nameAch.GetComponent<TextLanguage>().textEng = achievement.NameEng;
+            nameAch.text = achievement.Name;
+
+            descAch.GetComponent<TextLanguage>().textUkr = achievement.Description;
+            descAch.GetComponent<TextLanguage>().textEng = achievement.DescriptionEng;
+            descAch.text = achievement.Description;
+
+            if (achievement.isOk)
+            {
+                isOkAch.GetComponent<TextLanguage>().textUkr = "Отримано";
+                isOkAch.GetComponent<TextLanguage>().textEng = "Received";
+                isOkAch.text = "Отримано";
+            }
+            else
+            {
+                isOkAch.GetComponent<TextLanguage>().textUkr = "Не отримано";
+                isOkAch.GetComponent<TextLanguage>().textEng = "Not received";
+                isOkAch.text = "Не отримано";
+            }
+
+            imgAch = curEff.GetComponentInChildren<RawImage>();
+            LoadImage(achievement, imgAch);
+        }
+
 
         void LoadImage(Achievements ach, RawImage img)
         {
@@ -147,6 +180,18 @@ namespace Assets.Scripts.GameScripts
             {
                 Debug.LogError("❌ Не вдалося завантажити зображення: " + request.error);
             }
+        }
+
+        [Serializable]
+        public class UpdateAchivsDTO
+        {
+            public int Id;
+            public string Name;
+            public string NameEng;
+            public string Description;
+            public string DescriptionEng;
+            public string IconUrl;
+            public bool isOk;
         }
     }
 }
