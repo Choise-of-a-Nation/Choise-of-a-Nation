@@ -35,8 +35,6 @@ namespace Assets.Scripts.GameScripts
         int idText = 0;
         int idTurn = 0;
 
-        float startTime = Time.time;
-
         private string updateUrl = "https://choiseofanation.tryasp.net/register/update-hours/";
         private string updateUrlAchiv = "https://choiseofanation.tryasp.net/register/update-achivs/";
 
@@ -297,7 +295,9 @@ namespace Assets.Scripts.GameScripts
                 PlayerPrefs.SetString("textWinEng", "The end of the Kievan Rus’ was the end of a great era that left an unforgettable mark on history. Internal strife between princes who could not unite in the face of an external threat, and the invasion of the Mongol hordes in 1240 destroyed the foundations of the once powerful state. Kiev, the heart of Rus’, fell after a siege, and its majestic temples and walls were reduced to ashes.\r\n\r\nHowever, this tragedy did not mean the final end. The spirit of Kievan Rus’, its culture and faith, continued to live on, moving to new centers, such as the Vladimir-Suzdal land and later Muscovy. Rus’ did not perish — it transformed, leaving the world a lesson about the importance of unity in the face of the challenges of time.\r\n\r\nThe game is over. But the history of the Kievan Rus’ is still inspiring.");
             }
 
-            game.PlayerData.PlayedHours += (int)(Time.time - startTime);
+            GameTimeTracker.Instance.SaveSessionTime();
+            game.PlayerData.PlayedHours = GameTimeTracker.Instance.GetTotalPlayedHours();
+            Debug.Log(GameTimeTracker.Instance.GetTotalPlayedHours());
 
             BackSave();
         }
